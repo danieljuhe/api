@@ -19,22 +19,22 @@ const Home = () => {
 				<div className="col">
 					{
 						characters.map((character,index)=>{
-							return <div class="card mb-3" style="max-width: 540px;" key={index}>
+							return (<div class="card mb-3" key={index}>
 										<div class="row g-0">
 											<div class="col-md-4">
-											<img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" class="img-fluid rounded-start" alt="..."/>
+											<img src={character.image} class="img-fluid rounded-start" alt="..."/>
 											</div>
 											<div class="col-md-8">
 											<div class="card-body">
 												<h5 class="card-title">{character.name}</h5>
-												<p class="card-text">Specie:{character.species}</p>
-												<p class="card-text">Gender:{character.gender}</p>
-												<p class="card-text">Origin:{character.origin.name}</p>
-												<p class="card-text"><small class="text-muted">Status:{character.status}</small></p>
+												<p class="card-text">Specie: {character.species}</p>
+												<p class="card-text">Gender: {character.gender}</p>
+												<p class="card-text">Origin: {character.origin.name}</p>
+												<p class="card-text"><small class="text-muted">Status: {character.status}...</small></p>
 											</div>
 											</div>
 										</div>
-									</div>
+									</div>)
 						})
 					}
 				</div>
